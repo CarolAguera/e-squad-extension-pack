@@ -1,0 +1,77 @@
+{
+  "name": "e-squad-extensions",
+  "displayName": "e-squad-extensions",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "publisher": "carolinaaguera",
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#030518",
+    "theme": "dark"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "next"
+  ],
+  "repository": {
+    "url": "https://github.com/CarolAguera/e-squad-extension-pack.git"
+  },
+  "homepage": "https://github.com/CarolAguera/e-squad-extension-pack.git",
+  "activationEvents": [],
+  "extensionPack": [
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "ms-azuretools.vscode-docker",
+    "dracula-theme.theme-dracula",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "Tyriar.sort-lines",
+    "oderwat.indent-rainbow",
+    "WallabyJs.quokka-vscode",
+    "junstyle.php-cs-fixer",
+    "MehediDracula.php-namespace-resolver",
+    "EditorConfig.EditorConfig",
+    "sketchbuch.vsc-workspace-sidebar",
+    "andys8.jest-snippets",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "waderyan.gitblame"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "e-squad-extensions.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.2.3"
+  }
+}
